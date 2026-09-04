@@ -1,0 +1,172 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href="https://www.trueformconcrete.com/" />
+<meta property="og:title" content="TrueForm Concrete Construction | Gastonia, NC" />
+<meta property="og:description" content="Built True. Poured to Last. 20+ years of precision concrete work in Gastonia, NC." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context":"https://schema.org",
+  "@type":"HomeAndConstructionBusiness",
+  "name":"TrueForm Concrete Construction LLC",
+  "alternateName":"Quality Concrete Construction LLC",
+  "legalName":"Quality Concrete Construction LLC d/b/a TrueForm Concrete Construction LLC",
+  "url":"https://www.trueformconcrete.com",
+  "telephone":"+1-704-674-8306",
+  "email":"qualityconcrete28012@gmail.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Gastonia","addressRegion":"NC","addressCountry":"US"},
+  "areaServed":["Gastonia NC","Belmont NC","Stanley NC","Mount Holly NC","Shelby NC","Kings Mountain NC","Blacksburg SC","Lake Wylie NC","Fort Mill SC","Iron Station NC"],
+  "priceRange":"$$",
+  "openingHours":"Mo-Sa 07:00-21:00",
+  "description":"20+ years. Concrete contractor in Gastonia, NC specializing in driveways, patios, sidewalks, walkways, retaining walls, paving, grading and land clearing.",
+  "foundingDate":"2004"
+})} />
+</head>
+<body>
+  <slot />
+</body>
+</html>
+<style is:global>
+  :root{
+    --stone-50:#faf9f7;
+    --stone-100:#f2f0eb;
+    --stone-200:#e8e4de;
+    --stone-300:#d6d0c4;
+    --stone-800:#2b2b2b;
+    --stone-900:#1a1a1a;
+    --clay:#c17a4a;
+    --clay-hover:#a9653a;
+    --line:#e9e6e1;
+    --muted:#6b6b6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--stone-900);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .container{max-width:1180px;margin:0 auto;padding:0 32px}
+  .legal-bar{background:var(--stone-900);color:#aaa;font-size:11px;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:9px 16px}
+  .legal-bar strong{color:#fff;font-weight:600}
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:14px}
+  .logo-mark{width:40px;height:40px;background:var(--stone-900);color:white;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:18px;letter-spacing:.06em}
+  .logo-type{line-height:1}
+  .logo-type b{font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;display:block}
+  .logo-type span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-top:2px}
+  nav ul{display:flex;list-style:none;gap:32px;font-size:13px;letter-spacing:.10em;text-transform:uppercase;color:#333}
+  nav ul a:hover{color:var(--clay)}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .phone{font-size:13px;letter-spacing:.08em;font-weight:500}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 24px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:1px solid var(--stone-900);transition:.2s;border-radius:10px}
+  .btn-dark{background:var(--stone-900);color:#fff}
+  .btn-dark:hover{background:#000}
+  .btn-light{background:#fff;color:var(--stone-900)}
+  .btn-light:hover{background:var(--stone-50)}
+  .btn-clay{background:var(--clay);color:#fff;border-color:var(--clay)}
+  .btn-clay:hover{background:var(--clay-hover);border-color:var(--clay-hover)}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:640px}
+  .hero-left{background:var(--stone-50);display:flex;align-items:center;padding:80px 0}
+  .hero-left-inner{max-width:560px;margin-left:auto;padding:0 64px 0 32px}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+  .eyebrow::before{content:"";width:32px;height:1px;background:var(--clay)}
+  h1{font-family:'Cormorant Garamond',serif;font-size:84px;line-height:.88;font-weight:600;letter-spacing:-.04em;margin-bottom:20px}
+  h1 em{font-style:normal;color:var(--clay)}
+  .hero p{color:var(--muted);font-size:17px;font-weight:300;line-height:1.7;margin-bottom:32px;max-width:480px}
+  .hero-actions{display:flex;gap:12px;margin-bottom:36px}
+  .trust-row{display:flex;gap:28px;border-top:1px solid var(--line);padding-top:20px}
+  .trust-item b{font-size:22px;font-family:'Cormorant Garamond',serif;display:block;line-height:1}
+  .trust-item span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .hero-right{position:relative;overflow:hidden;background:#ddd}
+  .hero-right img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(1.05)}
+  .hero-card{position:absolute;bottom:32px;left:32px;right:32px;background:#fff;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 16px 40px rgba(0,0,0,.12);border-radius:12px}
+  .hero-card b{font-size:14px;letter-spacing:.06em}
+  .hero-card span{font-size:12px;color:var(--muted);display:block}
+  .stars{color:var(--clay);letter-spacing:.2em;font-size:13px}
+  section{padding:96px 0}
+  .section-head{max-width:640px;margin:0 auto 56px;text-align:center}
+  .section-head h2{font-family:'Cormorant Garamond',serif;font-size:46px;font-weight:500;line-height:1.02;margin:12px 0 16px;letter-spacing:-.02em}
+  .section-head p{color:var(--muted);font-weight:300;font-size:16px;line-height:1.7}
+  .services{border-top:1px solid var(--line)}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .service{background:#fff;padding:36px 32px;display:flex;flex-direction:column;gap:16px;min-height:300px;transition:.2s}
+  .service:hover{background:var(--stone-50)}
+  .service-icon{width:40px;height:40px;border:1px solid var(--line);display:grid;place-items:center;font-size:16px}
+  .service h3{font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+  .service p{font-size:14px;color:var(--muted);font-weight:300;line-height:1.6;flex:1}
+  .service a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border-bottom:1px solid var(--stone-900);padding-bottom:4px;align-self:flex-start}
+  .service a:hover{color:var(--clay);border-color:var(--clay)}
+  .service.featured{background:var(--stone-900);color:#fff}
+  .service.featured p{color:#bbb}
+  .service.featured .service-icon{border-color:#444;color:#fff}
+  .service.featured a{color:#fff;border-color:#fff}
+  .proof{background:var(--stone-900);color:#fff;padding:88px 0}
+  .proof-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+  .proof h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:500;line-height:1.05;margin-bottom:16px;letter-spacing:-.02em}
+  .proof h2 em{color:var(--clay);font-style:normal}
+  .proof p{color:#aaa;font-weight:300;line-height:1.7;margin-bottom:32px}
+  .proof-list{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .proof-item{display:flex;gap:12px}
+  .proof-icon{width:36px;height:36px;border:1px solid #333;display:grid;place-items:center;font-size:14px;flex-shrink:0;color:var(--clay)}
+  .proof-item b{font-size:13px;display:block;margin-bottom:4px}
+  .proof-item span{font-size:13px;color:#999;line-height:1.5;font-weight:300}
+  .proof-image{position:relative;height:480px;overflow:hidden;background:#222}
+  .proof-image img{width:100%;height:100%;object-fit:cover;opacity:.9}
+  .badge{position:absolute;top:24px;left:24px;background:#fff;color:var(--stone-900);padding:14px 18px;display:flex;gap:12px;align-items:center}
+  .badge b{font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1}
+  .badge span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;line-height:1.3}
+  .quote-wrap{max-width:760px;margin:0 auto;text-align:center}
+  .quote{font-family:'Cormorant Garamond',serif;font-size:32px;line-height:1.3;font-weight:400;color:var(--stone-900);margin:20px 0 24px;letter-spacing:-.01em}
+  .quote-footer{font-size:13px;letter-spacing:.08em}
+  .quote-footer strong{letter-spacing:.14em;text-transform:uppercase}
+  .quote-footer span{color:var(--muted)}
+  .areas{background:var(--stone-50);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .areas h2{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:500;margin-bottom:12px;letter-spacing:-.02em}
+  .areas p{color:var(--muted);font-weight:300;margin-bottom:28px;line-height:1.7}
+  .pill-grid{display:flex;flex-wrap:wrap;gap:8px}
+  .pill{border:1px solid var(--line);background:#fff;padding:8px 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;border-radius:999px}
+  .map-placeholder{height:360px;background:#e8e4de;border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:32px;color:var(--muted)}
+  .map-placeholder b{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--stone-900);display:block;margin-bottom:6px}
+  .cta{padding:80px 0;text-align:center}
+  .cta h2{font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:500;line-height:1;letter-spacing:-.02em}
+  .cta h2 em{color:var(--clay);font-style:normal}
+  .cta p{color:var(--muted);font-weight:300;margin:16px auto 32px;max-width:520px}
+  .cta-actions{display:flex;gap:12px;justify-content:center}
+  footer{background:var(--stone-900);color:#aaa;padding:56px 0 32px;font-size:13px}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+  .footer-brand b{font-family:'Cormorant Garamond',serif;color:#fff;font-size:18px;letter-spacing:.16em;text-transform:uppercase;display:block}
+  .footer-brand span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#777;display:block;margin-top:4px}
+  .footer-brand p{margin-top:16px;color:#777;line-height:1.6;font-weight:300;max-width:320px}
+  footer h4{color:#fff;font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+  footer a:hover{color:#fff}
+  footer ul{list-style:none;display:grid;gap:8px}
+  .footer-bottom{border-top:1px solid #2a2a2a;padding-top:20px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.08em;color:#666}
+  .seo-note{max-width:1180px;margin:0 auto;padding:12px 32px;background:#fffbe6;border:1px dashed #e6c84a;font-size:12px;color:#7a6a00}
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr}
+    .hero-right{height:420px;order:-1}
+    .service-grid{grid-template-columns:1fr 1fr}
+    .proof-grid,.areas-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+    nav ul{display:none}
+    h1{font-size:62px}
+  }
+  @media(max-width:560px){
+    .service-grid{grid-template-columns:1fr}
+    .hero-actions{flex-direction:column}
+    .cta-actions{flex-direction:column;align-items:center}
+    .footer-grid{grid-template-columns:1fr}
+  }
+</style>

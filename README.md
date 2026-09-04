@@ -1,18 +1,32 @@
-# TrueForm Concrete Construction
+# TrueForm Concrete Construction — Astro
 
 **Quality Concrete Construction LLC d/b/a TrueForm Concrete Construction LLC** — Gastonia, NC
 
-Minimal, elegant homepage preview — built for SEO and rebrand presentation.
+Minimal, elegant homepage — whitespace-heavy, SEO-optimized, now on **Astro 4**.
 
-- Live preview: `index.html`
-- Design: whitespace-heavy, Cormorant Garamond + Inter, clay/stone palette
-- SEO: LocalBusiness schema, NAP, areaServed, title/meta optimized for Gastonia + 40mi radius
+## Stack
+- Astro 4 (static)
+- No frameworks — pure Astro + CSS
 
 ## Dev
 ```bash
-python3 -m http.server 8000
-# http://localhost:8000/
+npm install
+npm run dev    # http://localhost:4321
+npm run build  # -> dist/
+npm run preview
+```
+
+## Structure
+```
+src/pages/index.astro   # Homepage
+src/layouts/Layout.astro # SEO + global styles
+public/                  # Static assets
 ```
 
 ## Deploy
-Static HTML — deploy to any host (Cloudflare Pages, Netlify, Vercel).
+`dist/` is static — deploy to Cloudflare Pages / Netlify / Vercel.
+
+## SEO
+- Title/meta + OG + canonical
+- LocalBusiness schema with d/b/a disclosure
+- areaServed: Gastonia + 11 cities

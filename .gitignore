@@ -1,4 +1,6 @@
+dist/
+node_modules/
+.astro/
 .DS_Store
 Thumbs.db
-/tmp/
 TrueForm-Homepage-Preview-LOCAL.html
