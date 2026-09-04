@@ -4,3 +4,4 @@ node_modules/
 .DS_Store
 Thumbs.db
 TrueForm-Homepage-Preview-LOCAL.html
+src/env.d.ts
