@@ -157,18 +157,46 @@ const { title, description } = Astro.props;
   .materials-banner img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.02) saturate(1.05)}
   .materials-overlay{position:absolute;inset:0;background:rgba(26,26,26,.75);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px}
   @media(max-width:900px){
-    .hero{grid-template-columns:1fr}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero-left{padding:48px 0}
+    .hero-left-inner{max-width:100%;margin:0;padding:0 24px}
     .hero-right{height:420px;order:-1}
     .service-grid{grid-template-columns:1fr 1fr}
-    .proof-grid,.areas-grid{grid-template-columns:1fr}
-    .footer-grid{grid-template-columns:1fr 1fr}
+    .proof-grid,.areas-grid{grid-template-columns:1fr;gap:32px}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
     nav ul{display:none}
     h1{font-size:66px}
+    section{padding:64px 0}
+    .section-head{margin-bottom:40px}
+    .proof{padding:64px 0}
+    .hero-card{left:16px;right:16px;bottom:16px;padding:16px 20px}
+    .materials-banner{height:360px}
+    .cta{padding:56px 0}
+    .container{padding:0 20px}
+    .trust-row{gap:20px}
+    .footer-bottom{flex-direction:column;gap:8px;text-align:center}
   }
   @media(max-width:560px){
     .service-grid{grid-template-columns:1fr}
+    .service{min-height:auto;padding:28px 24px}
     .hero-actions{flex-direction:column}
+    .hero-actions .btn{width:100%}
     .cta-actions{flex-direction:column;align-items:center}
+    .cta-actions .btn{width:100%;max-width:320px}
     .footer-grid{grid-template-columns:1fr}
+    h1{font-size:52px}
+    .section-head h2{font-size:36px}
+    .proof h2{font-size:36px}
+    .areas h2{font-size:34px}
+    .cta h2{font-size:40px}
+    .quote{font-size:26px}
+    .hero-left-inner{padding:0 20px}
+    .hero-right{height:320px}
+    .materials-banner{height:300px}
+    .materials-overlay{padding:20px}
+    .proof-list{grid-template-columns:1fr}
+    .areas-grid{gap:24px}
+    .map-placeholder{height:280px}
+    .footer-bottom span{display:block}
   }
 </style>
